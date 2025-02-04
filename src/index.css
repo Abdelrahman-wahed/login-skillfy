@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .btn {
+    @apply text-white rounded-lg text-xl w-full p-4 font-medium bg-transparent border-[#EAEAEA] border-[1px] duration-200 hover:bg-[#eee]  flex justify-center gap-5   items-center;
+  }
+}
+.selected {
+  border: 2px solid #703bf7;
+
+}
