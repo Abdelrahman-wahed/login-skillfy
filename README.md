@@ -51,13 +51,13 @@ Login Skillify This is a login/signup system called  that provides a comprehensi
 - Email verification with code input
 2. User Onboarding
 - Role selection (WhoAreYou component)
- * Potential Student
- * Potential Tutor
+   *  Potential Student
+   *  Potential Tutor
 - Interest selection (DoYouLike component)
-* Digital Design
-* Computer Programming
-* Data Analysis
-* Entrepreneurship
+   *  Digital Design
+   *  Computer Programming
+   *  Data Analysis
+   *  Entrepreneurship
 3. Security Features
 - Password visibility toggle
 - Form validation
@@ -114,8 +114,7 @@ i used TypeScript for type safety
 ```
 const Btn = ({ style, children }:{style?:string, children:React.ReactNode})...
 ```
-```
-type CardProfileProps ={
+```type CardProfileProps ={
 [key:string]:string
 }
 const CardProfile = ({ img, caption, specialWord, desc }:CardProfileProps)...
@@ -124,8 +123,7 @@ const CardProfile = ({ img, caption, specialWord, desc }:CardProfileProps)...
 const Header = ({caption ,desc}:{caption:string,desc:string})...
 ```
 
-```
-  const [likes, setLikes] = useState<string[]>([]);
+```  const [likes, setLikes] = useState<string[]>([]);
     function handleLikesItem(text:string) :void{
     setLikes((prev) => {
       return [...prev, text];
@@ -140,16 +138,13 @@ const Header = ({caption ,desc}:{caption:string,desc:string})...
   function Item({ text, likes ,i ,setLikes ,handleLikesItem}:{text:string,likes:string[],i:number,setLikes:React.Dispatch<React.SetStateAction<string[]>> , handleLikesItem: (text:string)=> void}) 
 
 
-
   const [dataForm, setDataFrom] = useState<{ Email: string, Password: string, Rmember:string}>({} as { Email: string, Password: string, Rmember:string});
   function handleSubmit(e:React.FormEvent<HTMLFormElement>) :void{
 ```
 - **Reusable Button**
 created reusable Button component like Btn.
 
-```
-
-const Btn = ({ style, children }:{style?:string, children:React.ReactNode}) => {
+```const Btn = ({ style, children }:{style?:string, children:React.ReactNode}) => {
   return (
     <button
       className={` ${style} cursor-pointer  btn bg-purpel hover:bg-[#692ffe] `}
@@ -158,10 +153,7 @@ const Btn = ({ style, children }:{style?:string, children:React.ReactNode}) => {
     </button>
   );
 };
-
 export default Btn;
-
-
 ```
 - **State Mangement**
 i used use state for manage local data
@@ -175,15 +167,13 @@ i used use tailwindcss for style
 i used use fontawesome for icon
 
 - **javaScript and ES6**
-```
-{Array.from({ length: 4 }, (_, i) => i).map((index) => {
+```{Array.from({ length: 4 }, (_, i) => i).map((index) => {
             return <Input key={index} />;
           })}
 ```
 - **Reusable Components**
 created reusable components like CardProfile.
-```
-type CardProfileProps ={
+```type CardProfileProps ={
 [key:string]:string
 }
 const CardProfile = ({ img, caption, specialWord, desc }:CardProfileProps) => {
@@ -215,8 +205,6 @@ const CardProfile = ({ img, caption, specialWord, desc }:CardProfileProps) => {
 };
 
 export default CardProfile;
-
-
 ```
 
 ## 🛠️Technologies Used
