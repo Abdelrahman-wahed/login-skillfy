@@ -1,5 +1,5 @@
 
-const Header = ({caption ,desc}) => {
+const Header = ({caption ,desc}:{caption:string,desc:string}) => {
   return (
     <div className="relative w-[515px] mt-7 mb-12">
           <img

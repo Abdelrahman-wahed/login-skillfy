@@ -5,7 +5,8 @@ import Btn from "./packge/Btn";
 import CardProfile from "./packge/CardProfile";
 import Header from "./packge/Header";
 import { useState } from "react";
-let itemsLike = [
+let itemsLike:{  text:string,
+  selected: boolean,}[] = [
   {
     text: "Digital Design",
     selected: true,
@@ -24,13 +25,13 @@ let itemsLike = [
   },
 ];
 const WhoAreYou = () => {
-  const [likes, setLikes] = useState([]);
-  function handleLikesItem(text) {
+  const [likes, setLikes] = useState<string[]>([]);
+  function handleLikesItem(text:string) :void{
     setLikes((prev) => {
       return [...prev, text];
     });
   }
-  function handleSubmit(e) {
+  function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     
   }
@@ -74,7 +75,7 @@ const WhoAreYou = () => {
     </div>
   );
 };
-function Item({ text, selected, i, likes, setLikes  ,handleLikesItem}) {
+function Item({ text, likes ,i ,setLikes ,handleLikesItem}:{text:string,likes:string[],i:number,setLikes:React.Dispatch<React.SetStateAction<string[]>> , handleLikesItem: (text:string)=> void}) {
   // const [likes, setLikes] = useState(selected);
   // function handleLikesItem() {
   //   setLikes(!likes);

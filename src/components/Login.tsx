@@ -5,16 +5,15 @@ import Btn from "./packge/Btn";
 import CardProfile from "./packge/CardProfile";
 import Header from "./packge/Header";
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  function handleShowPassword() {
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  function handleShowPassword() :void{
     setShowPassword(!showPassword);
   }
  
-  const [dataForm, setDataFrom] = useState({});
-  function handleSubmit(e) {
+  const [dataForm, setDataFrom] = useState<{ Email: string, Password: string, Rmember:string}>({} as { Email: string, Password: string, Rmember:string});
+  function handleSubmit(e:React.FormEvent<HTMLFormElement>) :void{
     e.preventDefault();
-    let login = { Email: e.target[0].value, Password: e.target[1].value, Rmember: e.target[2].value };
-    setDataFrom(login);
+ 
   }
   console.log( dataForm);
   return (
@@ -24,9 +23,8 @@ const Login = () => {
         caption="Connect With the "
         specialWord="Tutors"
         desc="You can easily connect with thousands of tutors by using our platform."
-      >
-        {" "}
-      </CardProfile>
+      />
+        
 
       <div className="px-10 pt-[20px] pb-[40px] bg-white relative    text-center rounded-xl  ">
         <Header

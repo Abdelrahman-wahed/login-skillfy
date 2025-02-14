@@ -1,4 +1,4 @@
-const Btn = ({ style, children }) => {
+const Btn = ({ style, children }:{style?:string, children:React.ReactNode}) => {
   return (
     <button
       className={` ${style} cursor-pointer  btn bg-purpel hover:bg-[#692ffe] `}

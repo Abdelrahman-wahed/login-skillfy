@@ -19,14 +19,15 @@ let choosePersonal = [
   },
 ];
 const WhoAreYou = () => {
-  const [choose, setChoose] = useState(0);
-  function handleChoose(index) {
-    setChoose(index !== choose ? index : null);
+  const [choose, setChoose] = useState<number>(0 );
+  function handleChoose(index:number) {
+    setChoose(index !== choose ? index : 0);
   }
 
-  function handlePersonal(e) {
+  function handlePersonal(e:React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(e.target.children[choose].children[1].innerHTML);
+    const form = e.target as HTMLFormElement
+    console.log(form.children[choose].children[1].innerHTML);
   }
   return (
     <div className="container bg-mainWhite font-Urbanist  flex justify-center gap-12 items-center  sm:flex-wrap">

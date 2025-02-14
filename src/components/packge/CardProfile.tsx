@@ -1,4 +1,7 @@
-const CardProile = ({ img, caption, specialWord, desc }) => {
+type CardProfileProps ={
+[key:string]:string
+}
+const CardProfile = ({ img, caption, specialWord, desc }:CardProfileProps) => {
   return (
     <div className="bg-mainWhite  self-stretch  py-[30px]  relative px-11 text-center rounded-xl  border-[#EAEAEA] border-2 ">
       <img className="pb-12 mx-auto mt-36 sm:w-72" src={img} alt="" />
@@ -26,4 +29,4 @@ const CardProile = ({ img, caption, specialWord, desc }) => {
   );
 };
 
-export default CardProile;
+export default CardProfile;
